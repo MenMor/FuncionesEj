@@ -4,22 +4,20 @@ def Factorial(numero):
         nfact *= i
     return nfact
 
+def get_factorial(numero):
+    if numero == 0:
+        return 1
+    return numero * get_factorial(numero-1)
+
+
 def PotenciaSumatoria(base, exponente):
-    x=1
+    x = 1
+    acum = 0
     for i in range(1, exponente+1):
         acum = 0
         for j in range(1, base+1):
             acum += x
         x = acum
-    return acum
-
-
-def SumatoriaCuadrado(numero):
-    i=1
-    acum=0
-    while i <= (2*numero-1):
-        acum += i
-        i += 2
     return acum
 
 def Potencia_Multiplicacion(base, exponente):
@@ -30,6 +28,26 @@ def Potencia_Multiplicacion(base, exponente):
         i += 1
     return acum
 
+def get_potencia_recursiva(a, b):
+    if b == 0:
+        return 1
+    elif a == 0:
+        return 0
+    elif b == 1:
+        return a
+    else:
+        return a * get_potencia_recursiva(a, b-1)
+
+
+def SumatoriaCuadrado(numero):
+    i = 1
+    acum = 0
+    while i <= (2*numero-1):
+        acum += i
+        i += 2
+    return acum
+
+
 def MetodoEuler(limite):
     sumatoria = 1
     for n in range(1, limite+1):
@@ -39,24 +57,14 @@ def MetodoEuler(limite):
         sumatoria += num/(Factorial(denominador))
     return sumatoria
 
+
 def SumaDigitos(numero):
-    suma=0
+    suma = 0
     while numero != 0:
         digito = numero % 10
         suma += digito
         numero //= 10
     return suma
-
-def Primo (numero):
-    cont = 0
-    for i in (1, numero+1):
-        if numero % i == 0:
-            cont += 1
-    if cont == 2:
-        num_primo: bool = True
-    else:
-        num_primo: bool = False
-    return num_primo
 
 
 def Division_Resta(dividendo, divisor):
@@ -70,5 +78,16 @@ def Division_Resta(dividendo, divisor):
             return respuesta
 
 
+def primo_compuesto(numero):
 
+    iteracion_mitad = int((numero ** (1 / 2)) // 1)
+    cont = 0
+    for i in range(1, iteracion_mitad + 1):
+        if numero % i == 0:
+            cont += 1
+    if cont == 1:
+        return True
+    else:
+        return False
+    
 

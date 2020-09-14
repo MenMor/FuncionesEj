@@ -23,24 +23,34 @@ while num != 0:
     sumatoria += num
     print("Usa 0 para terminar")
     num = int(input("Numero a procedar"))
-print("Sumatoria:",sumatoria)
+print("Sumatoria:", sumatoria)
 print("digitos:", SumaDigitos(sumatoria))
+
+
+
 
 print("\nMetodo euler ")
 
-
 lim = int(input("Introduce limite "))
-print("Aproximacion pi",MetodoEuler(lim)*2)
+print("Aproximacion pi", MetodoEuler(lim)*2)
 
 
 
 
-print("\nNumero primo ")
+print("\nNumero primo o compuesto ")
 
-num = int(input("Introduce un numero para verificar que sea primo"))
-if Primo(num):
-    print("Es primo")
+numero = int(input("\nIngrese numero: "))
+if primo_compuesto(numero):
+    print("Es primo.")
 else:
-    print("No es primo")
+    print("Es compuesto.")
 
 
+
+print("\nFactorización prima de un valor factorial")
+
+numero = int(input("Ingrese valor para calcular su factorización prima: "))
+if primo_compuesto(Factorial(numero)):
+     print(f"{Factorial(numero)}!  Es primo.")
+else:
+     print(f"{Factorial(numero)}!  Es compuesto.")
