@@ -1,3 +1,4 @@
+import numpy as np
 def Factorial(numero):
     nfact = 1
     for i in range(1, numero+1):
@@ -79,7 +80,6 @@ def Division_Resta(dividendo, divisor):
 
 
 def primo_compuesto(numero):
-
     iteracion_mitad = int((numero ** (1 / 2)) // 1)
     cont = 0
     for i in range(1, iteracion_mitad + 1):
@@ -89,5 +89,27 @@ def primo_compuesto(numero):
         return True
     else:
         return False
-    
+
+def get_list_primos(numero):
+    lista = []
+    cont = 0
+    for i in range(1, numero + 1):
+        if numero % i == 0:
+            cont += 1
+            lista.append(i)
+    return lista
+
+print("\nNumero primo o compuesto y sus valores divisibles:")
+num = int(input("Ingrese número: "))
+if primo_compuesto(num):
+    print(f"{num} Es Primo. \n Valores divisibles: {get_list_primos(num)}")
+else:
+    print(f"{num} Es compuesto. \n Valores divisibles: {get_list_primos(num)}")
+
+
+def promedio(lista):
+    suma = np.sum(lista)
+    promedio = suma / len(lista)
+    return promedio
+
 

@@ -39,11 +39,19 @@ print("Aproximacion pi", MetodoEuler(lim)*2)
 
 print("\nNumero primo o compuesto ")
 
-numero = int(input("\nIngrese numero: "))
+numero = int(input("\nIngrese número: "))
 if primo_compuesto(numero):
     print("Es primo.")
 else:
     print("Es compuesto.")
+
+print("\nNumero primo o compuesto y sus valores divisibles:")
+
+num = int(input("Ingrese número: "))
+if primo_compuesto(num):
+    print(f"{num} Es Primo. \n Valores divisibles: {get_list_primos(num)}")
+else:
+    print(f"{num} Es compuesto. \n Valores divisibles: {get_list_primos(num)}")
 
 
 
@@ -54,3 +62,15 @@ if primo_compuesto(Factorial(numero)):
      print(f"{Factorial(numero)}!  Es primo.")
 else:
      print(f"{Factorial(numero)}!  Es compuesto.")
+
+
+print("\nCalcular promedio")
+list_notas = []
+i = 3
+while i == 3:
+    nota = float(input("Ingrese nota: "))
+    list_notas.append(nota)
+    fin = int(input("Fin del proceso ponga 0: "))
+    if fin == 0:
+        i = 8
+print(round(promedio(list_notas), 2))

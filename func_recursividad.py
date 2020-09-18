@@ -31,3 +31,5 @@ def get_potencia(a, b):
         return a * get_potencia(a, b-1)
 
 print(get_potencia(2, 4))
+
+
