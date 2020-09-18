@@ -52,26 +52,3 @@ matriz_1 = np.array([[1, 2, 3, 4],
 
 matriz_s = get_matriz_a(matriz_1)
 print(matriz_s)
-
-
-
-
-
-
-
-"""import numpy as np
-
-def get_matriz_aleatiria(filas, columnas):
-    return np.random.randint(1, 10, (filas, columnas))
-
-def multiplicacion_matriz(matriz1, matriz2):
-    if len(matriz1) == len(matriz2):
-    matriz_result = np.ones((len(matriz1), len(matriz2)))
-    sum = 0
-    for i in range(0, len(matriz1)):
-        for j in range(0, len(matriz2[i])):
-            mult = matriz1[i] * matriz2[j]
-            sum += mult"""
-
-
-
