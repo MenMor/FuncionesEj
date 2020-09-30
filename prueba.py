@@ -39,5 +39,5 @@ while x <= 10:
     x += 1
 
 r1 = np.insert(r1, 1, r, axis=1)
-print(r1)
+print('Dígito Cantidad', '\n', r1)
 
